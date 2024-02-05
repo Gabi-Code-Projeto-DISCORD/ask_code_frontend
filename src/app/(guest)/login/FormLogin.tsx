@@ -13,7 +13,7 @@ const schema: yup.ObjectSchema<any> = yup.object({
 export default function FormLogin(): JSX.Element {
     const { register, handleSubmit, formState: { errors } } = useForm<LoginType>({
         defaultValues: {
-            login: '',
+            email: '',
             password: ''
         },
         resolver: yupResolver(schema)
@@ -22,26 +22,25 @@ export default function FormLogin(): JSX.Element {
 
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-                <InputText
-                    label="E-mail:"
-                    error={errors.login?.message}
-                    register={register("login")}
-                />
-            </div>
-            <div>
-                <InputText
-                    label="Senha:"
-                    error={errors.password?.message}
-                    register={register("password")}
-                    type="password"
-                />
-            </div>
-            <div className="text-center" style={{marginTop: '67px', marginBottom: '64px'}}>
-                <div>
-                    <button type="submit">Entrar</button>
-                </div>
-                <a href="#">Ainda não tenho uma conta</a>
+            <InputText 
+                label="E-mail"
+                error={errors.email?.message}
+                register={register("email")}
+                type="email"
+                
+            
+            />
+            <InputText 
+                label="Senha"
+                error={errors.password?.message}
+                register={register("password")}
+                type="password"
+                
+            
+            />
+            <div className="buttons-box">
+                <button type="submit">Entrar</button>
+                <a href="">Ainda não tenho uma conta</a>
             </div>
         </form>
     )
