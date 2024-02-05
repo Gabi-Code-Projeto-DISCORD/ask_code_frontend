@@ -1,74 +1,10 @@
-.background-left,
-.background-right {
-    position: absolute;
-    width: 40vw;
-    z-index: 1;
-}
-
-.background-left {
-    top: 0px;
-    left: 0px;
-}
-
-.background-right {
-    right: 0px;
-    bottom: 0px;
-}
-
-.container {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
+.container { 
+    background-image: url(../../../public/assets/img/background-login.svg);
+    background-size: cover;
     height: 100%;
-    z-index: 2;
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-label {
-    width: 100%;
-    display: block;
-    font-weight: 700;
-}
-
-input {
-    background: var(--color-primary-background);
-    color: var(--color-primary-text-on);
-    font-size: 18px;
-    height: 44px;
-    border-radius: var(--border-radius);
-    width: 100%;
-    border-color: transparent;
-}
-
-input.input-error {
-    border-color: red;
-}
-
-samp {
-    color: red;
-}
-
-form {
-    max-width: 348px;
-    width: 100%;
-    margin: auto;
-}
-
-form > div {
-    margin-top: 10px;
-}
-
-button {
-    height: 43px;
-    padding: 0 62.5px;
-    border-radius: var(--border-radius);
-    background: var(--color-secondary-active);
-    color: var(--color-primary-text);
-    font-weight: 700;
-    cursor: pointer;
-}
-
-button:hover {
-    background: var(--color-primary);
-}

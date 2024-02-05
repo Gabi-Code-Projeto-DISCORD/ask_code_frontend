@@ -7,9 +7,7 @@ export default function ContainerGuest({
 }): JSX.Element {
   return (
     <div className="form-guest">
-      <div className="ball-top-right"></div>
         { children }
-      <div className="ball-bottom-left"></div>
     </div>
   )
 }

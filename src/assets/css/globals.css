@@ -31,27 +31,21 @@
 }
 
 html, body, main {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    background: var(--color-secondary-background);
     color: var(--color-primary-text);
+    height: 100vh;
+    width: 100vw;
 }
 
 * {
     font-family: var(--font-family);
     font-size: 15px;
+    margin: 0;
+    padding: 0;
+   
 }
 
-a {
-    color: var(--color-secondary-active);
+
+samp {
+    color: var(--color-tertiary);
 }
 
-a:hover {
-    color: var(--color-secondary);
-}
-
-.text-center {
-    text-align: center;
-}
