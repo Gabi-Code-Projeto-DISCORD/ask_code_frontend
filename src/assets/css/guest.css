@@ -51,7 +51,7 @@ samp {
 
 form {
     max-width: 348px;
-    width: 100%;
+    width: 50vw;
     margin: auto;
 }
 
@@ -61,7 +61,8 @@ form > div {
 
 button {
     height: 43px;
-    padding: 0 62.5px;
+    padding: 0 15%;
+    margin-bottom: 10px;
     border-radius: var(--border-radius);
     background: var(--color-secondary-active);
     color: var(--color-primary-text);

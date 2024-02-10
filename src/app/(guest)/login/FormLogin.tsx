@@ -37,7 +37,7 @@ export default function FormLogin(): JSX.Element {
                     type="password"
                 />
             </div>
-            <div className="text-center" style={{marginTop: '67px', marginBottom: '64px'}}>
+            <div className="text-center" style={{marginTop: '27px', marginBottom: '27px'}}>
                 <div>
                     <button type="submit">Entrar</button>
                 </div>
