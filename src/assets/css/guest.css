@@ -1,7 +1,7 @@
 .background-left,
 .background-right {
-    position: absolute;
-    width: 40vw;
+    position: fixed;
+    width: 35vw;
     z-index: 1;
 }
 
@@ -18,9 +18,12 @@
 .container {
     position: relative;
     margin: 0px;
+    justify-content: center;
+    align-items: center;
     padding: 0px;
     width: 100%;
-    height: 100%;
+    height: max-content;
+    min-height: 100%;
     z-index: 2;
     display: flex;
 }
@@ -29,16 +32,18 @@ label {
     width: 100%;
     display: block;
     font-weight: 700;
+    font-size: 14px;
 }
 
 input {
     background: var(--color-primary-background);
     color: var(--color-primary-text-on);
-    font-size: 18px;
-    height: 44px;
+    font-size: 14px;
+    height: 32px;
     border-radius: var(--border-radius);
-    width: 100%;
+    width: calc(100% - 20px);
     border-color: transparent;
+    padding: 0 8px;
 }
 
 input.input-error {
@@ -50,8 +55,8 @@ samp {
 }
 
 form {
-    max-width: 348px;
-    width: 50vw;
+    max-width: 254px;
+    width: 100%;
     margin: auto;
 }
 
@@ -60,16 +65,27 @@ form > div {
 }
 
 button {
-    height: 43px;
-    padding: 0 15%;
-    margin-bottom: 10px;
+    height: 31px;
+    padding: 0 62.5px;
     border-radius: var(--border-radius);
     background: var(--color-secondary-active);
     color: var(--color-primary-text);
+    border: none;
     font-weight: 700;
+    font-size: 13px;
     cursor: pointer;
 }
 
 button:hover {
     background: var(--color-primary);
+}
+
+a {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        min-height: 100%;
+    }
 }

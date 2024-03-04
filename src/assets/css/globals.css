@@ -11,6 +11,11 @@
     --color-secondary-active: #24BBF0;
     --color-tertiary: #3F3864;
     --color-tertiary-on: #D9D9D926;
+    --width-sm: 540px;
+    --width-md: 720px;
+    --width-lg: 960px;
+    --width-xl: 1140px;
+    --width-xx: 1320px;
     --border-radius: 10px;
     --font-family: 'Poppins', sans-serif;
 }
@@ -32,12 +37,18 @@
 
 html, body, main {
     width: 100%;
+    min-height: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     background: var(--color-secondary-background);
     color: var(--color-primary-text);
 }
+
+main {
+    margin: initial;
+}
+
 
 * {
     font-family: var(--font-family);

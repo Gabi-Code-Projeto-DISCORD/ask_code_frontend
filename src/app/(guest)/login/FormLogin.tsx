@@ -8,25 +8,27 @@ import InputText from "@/app/components/InputText"
 const schema: yup.ObjectSchema<any> = yup.object({
     login: yup.string().required(),
     password: yup.string().required()
-}).required();
+}).required()
 
 export default function FormLogin(): JSX.Element {
+    const onSubmit: SubmitHandler<LoginType> = data => console.log(data)
     const { register, handleSubmit, formState: { errors } } = useForm<LoginType>({
         defaultValues: {
             login: '',
             password: ''
         },
         resolver: yupResolver(schema)
-    });
-    const onSubmit: SubmitHandler<LoginType> = data => console.log(data);
+    })
 
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <InputText
                     label="E-mail:"
+                    type="email"
                     error={errors.login?.message}
                     register={register("login")}
+                    placeholder="Digite seu e-mail"
                 />
             </div>
             <div>
@@ -34,14 +36,15 @@ export default function FormLogin(): JSX.Element {
                     label="Senha:"
                     error={errors.password?.message}
                     register={register("password")}
+                    placeholder="Digite sua senha"
                     type="password"
                 />
             </div>
-            <div className="text-center" style={{marginTop: '27px', marginBottom: '27px'}}>
+            <div className="text-center" style={{marginTop: '70px', marginBottom: '45px'}}>
                 <div>
                     <button type="submit">Entrar</button>
                 </div>
-                <a href="#">Ainda não tenho uma conta</a>
+                <a href="/cadastro">Ainda não tenho uma conta</a>
             </div>
         </form>
     )
