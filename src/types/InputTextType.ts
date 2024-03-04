@@ -5,6 +5,7 @@ type InputTextType = {
     label: string;
     error?: string;
     type?: string;
+    placeholder?: string;
 }
 
 export default InputTextType

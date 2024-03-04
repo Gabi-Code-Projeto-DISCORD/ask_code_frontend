@@ -1,11 +1,11 @@
 .form-guest {
     width: 100%;
-    max-width: 490px;
+    max-width: 356px;
     background: var(--color-primary-on);
     color: var(--color-primary-text-on);
     border-radius: 14px;
-    height: max-content;
-    margin: auto;
+    margin-top: 28.5px;
+    margin-bottom: 20.5px;
     position: relative;
     z-index: 2;
 }
@@ -30,17 +30,17 @@
 }
 
 .ball-top-right::after {
-    width: 79px;
-    height: 79px;
-    top: -39.5px;
-    right: -39.5px;
+    width: 57px;
+    height: 57px;
+    top: -28.5px;
+    right: -28.5px;
 }
 
 .ball-bottom-left::after {
-    width: 57px;
-    height: 57px;
-    bottom: -28.5px;
-    left: -28.5px;
+    width: 41px;
+    height: 41px;
+    bottom: -20.5px;
+    left: -20.5px;
 }
 
 .logo {
@@ -49,4 +49,30 @@
 
 .logo > img {
     margin: auto;
+    width: 143px;
+}
+
+
+@media screen and (max-width: 540px) {
+    .form-guest {
+        max-width: 100%;
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    .ball-top-right::after {
+        top: 10px;
+        right: 10px;
+    }
+
+    .ball-bottom-left::after {
+        left: 10px;
+        bottom: 10px;
+    }
 }
